@@ -1,7 +1,7 @@
 <configuration>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%black(%d{HH:mm:ss.SSS}) [%15.15thread{14}] %highlight(%.-1level) %cyan(%40.40logger{39}): %highlight(%msg) %replace([%marker]){'\[\]', ''}%n%highlight(%throwable)</pattern>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -10,4 +10,5 @@
     </root>
 
     <logger name="org.testcontainers" level="INFO"/>
+    <logger name="com.github.dockerjava" level="WARN"/>
 </configuration>
