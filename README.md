@@ -1,4 +1,4 @@
-# AtomicJar & Testcontainers Desktop 
+# AtomicJar booth password application
 
 1. Install [Testcontainers Desktop app](https://testcontainers.com/desktop?utm_medium=event&utm_source=2023-springone&utm_content=raffle-repo). It is free to try and takes less than 5 minutes!
 2. Clone this repository or download and unzip it. 
