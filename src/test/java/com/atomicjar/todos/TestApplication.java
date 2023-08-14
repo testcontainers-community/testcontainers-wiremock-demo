@@ -39,11 +39,11 @@ class DataLoader {
     @PostConstruct
     public void addTodo() {
         String serverVersion = DockerClientFactory.instance().getInfo().getServerVersion();
-        String title = "Set up and run with Testcontainers Cloud!";
+        String title = "Set up and run with Testcontainers desktop app and Testcontainers Cloud!";
 
         if (serverVersion.endsWith("testcontainerscloud")) {
             String string = jdbcTemplate.queryForObject("SELECT encode(sha256(?::bytea), 'hex')", String.class, serverVersion);
-            title = "Fill the raffle form: bit.ly/" + string.substring(0, 8);
+            title = "I need your root, your RAM, and your CPU cycles";
         }
 
         Todo t = new Todo();
