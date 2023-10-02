@@ -16,7 +16,7 @@ public class ContainersConfig {
         var container = new WireMockContainer("wiremock/wiremock:3.1.0")
             .withMappingFromResource("hackernews", "hackernews_v0-stubs.json");
 
-//        properties.add("hackernews.base-url", container::getBaseUrl);
+        properties.add("hackernews.base-url", container::getBaseUrl);
         return container;
     }
 

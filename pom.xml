@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.atomicjar</groupId>
-	<artifactId>testcontainers-java-spring-boot-quickstart</artifactId>
+	<artifactId>testcontainers-wiremock-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>testcontainers-java-spring-boot-quickstart</name>
 	<description>AtomicJar booth password application </description>
