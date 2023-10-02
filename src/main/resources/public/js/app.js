@@ -37,7 +37,7 @@ $(function () {
 
 	// Create our global collection of **Todos**.
 	app.todos = new app.Todos();
-  app.todos.url = apiRootUrl;
+    app.todos.url = apiRootUrl;
 
 	app.TodoRouter = new app.TodoRouter();
 	Backbone.history.start();

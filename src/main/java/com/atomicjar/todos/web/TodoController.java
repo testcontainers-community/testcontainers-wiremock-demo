@@ -1,6 +1,7 @@
 package com.atomicjar.todos.web;
 
 import com.atomicjar.todos.entity.Todo;
+import com.atomicjar.todos.hn.HackernewsClient;
 import com.atomicjar.todos.repository.TodoRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +13,11 @@ import jakarta.validation.Valid;
 @RequestMapping("/todos")
 public class TodoController {
     private final TodoRepository repository;
+    private final HackernewsClient hackernewsClient;
 
-    public TodoController(TodoRepository repository) {
+    public TodoController(TodoRepository repository, HackernewsClient hackernewsClient) {
         this.repository = repository;
+        this.hackernewsClient = hackernewsClient;
     }
 
     @GetMapping
@@ -22,6 +25,10 @@ public class TodoController {
         return repository.findAll();
     }
 
+    @PostMapping("/hn")
+    public void populateFromHN() {
+        hackernewsClient.getTopStories(10);
+    }
     @GetMapping("/{id}")
     public ResponseEntity<Todo> getById(@PathVariable String id) {
         return repository.findById(id)
@@ -44,6 +51,8 @@ public class TodoController {
         Todo existingTodo = repository.findById(id).orElseThrow(() -> new TodoNotFoundException(id));
         if(todo.getCompleted() != null) {
             existingTodo.setCompleted(todo.getCompleted());
+
+            // do something else cool 3rd party service?
         }
         if(todo.getOrder() != null) {
             existingTodo.setOrder(todo.getOrder());

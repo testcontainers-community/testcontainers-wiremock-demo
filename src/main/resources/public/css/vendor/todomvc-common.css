@@ -24,7 +24,7 @@ body {
 	line-height: 1.4em;
 	background: #eaeaea url('bg.png');
 	color: #4d4d4d;
-	width: 640px;
+	width: 1280px;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
@@ -197,7 +197,7 @@ label[for='toggle-all'] {
 
 #todo-list li.editing .edit {
 	display: block;
-	width: 506px;
+	width: 96%;
 	padding: 13px 17px 12px 17px;
 	margin: 0 0 0 43px;
 }
