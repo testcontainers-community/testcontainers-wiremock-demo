@@ -38,12 +38,12 @@ class DataLoader {
 
     @PostConstruct
     public void addTodo() {
-//        String serverVersion = DockerClientFactory.instance().getInfo().getServerVersion();
-//        String title = "Post to /hn";
-//
-//
-//        Todo t = new Todo();
-//        t.setTitle(title);
-//        todoRepository.save(t);
+        Todo t1 = new Todo();
+        t1.setTitle("Learn about Testcontainers");
+        todoRepository.save(t1);
+
+        Todo t2 = new Todo();
+        t2.setTitle("Learn about WireMock");
+        todoRepository.save(t2);
     }
 }
