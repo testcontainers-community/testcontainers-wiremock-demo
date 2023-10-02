@@ -27,8 +27,9 @@ public class TodoController {
 
     @PostMapping("/hn")
     public void populateFromHN() {
-        hackernewsClient.getTopStories(10);
+        hackernewsClient.getTopStories(4);
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<Todo> getById(@PathVariable String id) {
         return repository.findById(id)
