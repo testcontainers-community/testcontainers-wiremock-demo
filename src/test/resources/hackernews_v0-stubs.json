@@ -159,7 +159,7 @@
       "method" : "GET",
       "pathParameters" : {
         "id" : {
-          "equalTo" : "12132423454"
+          "equalTo" : "12345"
         }
       },
       "formParameters" : { }
@@ -323,8 +323,46 @@
         }
       }
     }
-  } ],
+  },
+  {
+    "name" : "Story 1",
+    "request" : {
+      "urlPathTemplate" : "/item/{id}.json",
+      "method" : "GET",
+      "pathParameters" : {
+        "id" : {
+          "equalTo" : "12346"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "jsonBody" : {
+        "by": "wiremock",
+        "title" : "WireMock has an official Testcontainers module!",
+        "type" : "story",
+        "url" : "https://testcontainers.com/modules/wiremock/"
+      },
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    }
+  },
+  {
+    "name" : "Get Hacker News Item - 404",
+    "request" : {
+      "urlPathTemplate" : "/beststories.json",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : " [ 12345, 12346 ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    }
+  }],
   "meta" : {
-    "total" : 11
+    "total" : 13
   }
 }
