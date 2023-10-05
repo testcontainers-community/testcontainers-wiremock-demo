@@ -25,7 +25,7 @@ public class ContainersConfig {
     @ServiceConnection
     @RestartScope
     PostgreSQLContainer<?> postgreSQLContainer(){
-        return new PostgreSQLContainer<>("postgres:15-alpine").withReuse(true);
+        return new PostgreSQLContainer<>("postgres:15-alpine");
     }
 
 }

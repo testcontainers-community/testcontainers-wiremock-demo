@@ -14,6 +14,9 @@ import org.testcontainers.DockerClientFactory;
 
 import java.sql.PreparedStatement;
 
+// run this application with:
+// ./mvnw spring-boot:test-run
+//
 public class TestApplication {
     public static void main(String[] args) {
         SpringApplication
