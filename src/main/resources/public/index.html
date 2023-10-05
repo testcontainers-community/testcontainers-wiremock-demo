@@ -44,7 +44,10 @@
 			<div class="view">
 				<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
 				<label><%- title %></label>
-				<button class="destroy"></button>
+				<% if (link != null) { %>
+				<a href="<%- link %>" target="_blank" class="link action"></a>
+				<% } %>
+				<button class="destroy action"></button>
 			</div>
 			<input class="edit" value="<%- title %>">
 		</script>

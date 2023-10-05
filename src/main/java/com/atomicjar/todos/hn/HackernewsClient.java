@@ -49,7 +49,7 @@ public class HackernewsClient {
           String title = hnItem.title();
           List<Todo> byTitle = todoRepository.findByTitle(title);
           if(byTitle.isEmpty()) {
-            Todo todo = new Todo(null, title, false, hnItem.descendants());
+            Todo todo = new Todo(null, title, hnItem.url(), false, hnItem.descendants());
             todoRepository.save(todo);
           }
           else {

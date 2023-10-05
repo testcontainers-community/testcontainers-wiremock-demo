@@ -255,11 +255,9 @@ label[for='toggle-all'] {
 	text-decoration: line-through;
 }
 
-#todo-list li .destroy {
-	display: none;
+#todo-list li .action {
 	position: absolute;
 	top: 0;
-	right: 10px;
 	bottom: 0;
 	width: 40px;
 	height: 40px;
@@ -270,7 +268,17 @@ label[for='toggle-all'] {
 	transition: all 0.2s;
 }
 
-#todo-list li .destroy:hover {
+#todo-list li .destroy {
+	display: none;
+	right: 10px;
+}
+
+#todo-list li .link {
+    right: 60px;
+    width: 80px;
+}
+
+#todo-list li .action:hover {
 	text-shadow: 0 0 1px #000,
 				 0 0 10px rgba(199, 107, 107, 0.8);
 	-webkit-transform: scale(1.3);
@@ -281,7 +289,11 @@ label[for='toggle-all'] {
 	content: '✖';
 }
 
-#todo-list li:hover .destroy {
+#todo-list li .link:after {
+	content: '-->';
+}
+
+#todo-list li:hover .action {
 	display: block;
 }
 

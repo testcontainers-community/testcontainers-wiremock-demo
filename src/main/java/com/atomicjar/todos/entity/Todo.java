@@ -16,6 +16,9 @@ public class Todo {
     @Column(name = "title", nullable = false)
     private String title;
 
+    @Column(name = "link", nullable = false)
+    private String link;
+
     @Column(name = "completed")
     private Boolean completed = false;
 
@@ -25,11 +28,12 @@ public class Todo {
     public Todo() {
     }
 
-    public Todo(String id, String title, Boolean completed, Integer order) {
+    public Todo(String id, String title, String link, Boolean completed, Integer order) {
         this.id = id;
         this.title = title;
         this.completed = completed;
         this.order = order;
+        this.link = link;
     }
 
     public String getId() {
@@ -62,6 +66,14 @@ public class Todo {
 
     public void setOrder(Integer order) {
         this.order = order;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public String getUrl() {
