@@ -34,6 +34,7 @@
 			<footer id="footer"></footer>
 		</section>
 		<footer id="info">
+			<button id="read-hackernews">What's up on Hackernews?</button>
 			<p>Double-click to edit a todo</p>
       <p>Written by <a href="https://github.com/addyosmani">Addy Osmani</a>, modified by <a href="https://github.com/moredip">Pete Hodgson</a> to be integrated with a <a href="http://www.todobackend.com">TodoBackend API</a>.</p>
       <p>Part of <a href="http://todomvc.com">TodoMVC</a> &amp; <a href="http://www.todobackend.com">TodoBackend</a></p>
@@ -62,6 +63,7 @@
 			<% if (completed) { %>
 			<button id="clear-completed">Clear completed (<%= completed %>)</button>
 			<% } %>
+			
 		</script>
 		<script src="js/vendor/todomvc-common.js"></script>
 		<script src="js/vendor/jquery.js"></script>
@@ -74,5 +76,6 @@
 		<script src="js/views/app-view.js"></script>
 		<script src="js/routers/router.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/hackernews.js"></script>
 	</body>
 </html>

@@ -409,13 +409,10 @@
     },
     "response" : {
       "status" : 200,
-      "body" : " [ 12345, 12346, 678, 435, 239 ]",
+      "body" : " [ 12346, 678, 435, 239 ]",
       "headers" : {
         "Content-Type" : "application/json"
       }
     }
-  }],
-  "meta" : {
-    "total" : 13
-  }
+  }]
 }
