@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.io.IOException;
+import java.util.List;
 
 // class to query the Hackernews API, and return HackernewsItem objects
 @Component
@@ -45,8 +46,15 @@ public class HackernewsClient {
             .bodyToMono(HackernewsItem.class))
         .subscribe(hnItem ->
         {
-          Todo todo = new Todo(null, hnItem.title(), false, hnItem.descendants());
-          todoRepository.save(todo);
+          String title = hnItem.title();
+          List<Todo> byTitle = todoRepository.findByTitle(title);
+          if(byTitle.isEmpty()) {
+            Todo todo = new Todo(null, title, false, hnItem.descendants());
+            todoRepository.save(todo);
+          }
+          else {
+            System.out.println("hahah " + title + " already exists");
+          }
         });
   }
 

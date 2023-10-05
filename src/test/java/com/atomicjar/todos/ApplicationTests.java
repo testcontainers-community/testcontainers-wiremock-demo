@@ -13,6 +13,8 @@ class ApplicationTests {
 
     @Test
     void contextLoads() {
+        // TODO: application tests that posts to /hn and then verifies that we got stories in the database?
+
     }
 
 }

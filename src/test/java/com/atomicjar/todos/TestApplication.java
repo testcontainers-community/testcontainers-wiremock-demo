@@ -21,7 +21,6 @@ public class TestApplication {
                 .with(ContainersConfig.class)
                 .run(args);
     }
-
 }
 
 @Component
@@ -38,6 +37,9 @@ class DataLoader {
 
     @PostConstruct
     public void addTodo() {
+        if(!todoRepository.findAll().isEmpty()) {
+            return;
+        }
         Todo t1 = new Todo();
         t1.setTitle("Learn about Testcontainers");
         todoRepository.save(t1);
