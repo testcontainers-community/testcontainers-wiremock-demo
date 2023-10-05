@@ -6,7 +6,9 @@ button.addEventListener('click', async _ => {
       method: 'post'
     });
     console.log('Completed!', response);
-    window.location.reload();
+    setTimeout(() => {
+        document.location.reload();
+    }, 1000);
   } catch(err) {
     console.error(`Error: ${err}`);
   }
