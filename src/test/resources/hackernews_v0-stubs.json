@@ -325,7 +325,6 @@
     }
   },
   {
-    "name" : "Story 1",
     "request" : {
       "urlPathTemplate" : "/item/{id}.json",
       "method" : "GET",
@@ -349,6 +348,60 @@
     }
   },
   {
+    "request" : {
+      "urlPathTemplate" : "/item/678.json",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "jsonBody" : {
+        "by": "wiremock",
+        "title" : "WireMock and AtomicJar partnership on Testcontainers",
+        "type" : "story",
+        "url" : "https://www.wiremock.io/post/atomicjar-partnership-on-testcontainers"
+      },
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    }
+  },
+  {
+    "request" : {
+      "urlPathTemplate" : "/item/239.json",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "jsonBody" : {
+        "by": "onenashev",
+        "title" : "Check it out: Testcontainers for C/C++",
+        "type" : "story",
+        "url" : "https://github.com/oleg-nenashev/testcontainers-c"
+      },
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    }
+  },
+  {
+    "request" : {
+      "urlPathTemplate" : "/item/435.json",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "jsonBody" : {
+        "by": "selajev",
+        "title" : "State of Local Development and Testing 2023",
+        "type" : "story",
+        "url" : "https://www.atomicjar.com/2023/09/state-of-local-development-and-testing-2023/"
+      },
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    }
+  },
+  {
     "name" : "Get Hacker News Item - 404",
     "request" : {
       "urlPathTemplate" : "/beststories.json",
@@ -356,7 +409,7 @@
     },
     "response" : {
       "status" : 200,
-      "body" : " [ 12345, 12346 ]",
+      "body" : " [ 12345, 12346, 678, 435, 239 ]",
       "headers" : {
         "Content-Type" : "application/json"
       }
