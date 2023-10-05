@@ -52,9 +52,6 @@ public class HackernewsClient {
             Todo todo = new Todo(null, title, false, hnItem.descendants());
             todoRepository.save(todo);
           }
-          else {
-            System.out.println("hahah " + title + " already exists");
-          }
         });
   }
 

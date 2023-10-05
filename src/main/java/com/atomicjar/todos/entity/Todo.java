@@ -1,5 +1,6 @@
 package com.atomicjar.todos.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -64,7 +65,18 @@ public class Todo {
         this.order = order;
     }
 
+    @JsonIgnore
     public String getUrl() {
         return ServletUriComponentsBuilder.fromCurrentContextPath().toUriString() + "/todos/" + this.getId();
+    }
+
+    @Override
+    public String toString() {
+        return "Todo{" +
+            "id='" + id + '\'' +
+            ", title='" + title + '\'' +
+            ", completed=" + completed +
+            ", order=" + order +
+            '}';
     }
 }
