@@ -337,6 +337,7 @@
     "response" : {
       "status" : 200,
       "jsonBody" : {
+        "id" : 12346,
         "by": "wiremock",
         "title" : "WireMock has an official Testcontainers module!",
         "type" : "story",
@@ -355,6 +356,7 @@
     "response" : {
       "status" : 200,
       "jsonBody" : {
+        "id" : 678,
         "by": "wiremock",
         "title" : "WireMock and AtomicJar partnership on Testcontainers",
         "type" : "story",
@@ -373,6 +375,7 @@
     "response" : {
       "status" : 200,
       "jsonBody" : {
+        "id" : 239,
         "by": "onenashev",
         "title" : "Check it out: Testcontainers for C/C++",
         "type" : "story",
@@ -391,6 +394,7 @@
     "response" : {
       "status" : 200,
       "jsonBody" : {
+        "id" : 435,
         "by": "selajev",
         "title" : "State of Local Development and Testing 2023",
         "type" : "story",

@@ -11,6 +11,6 @@ import java.util.Date;
 import java.util.List;
 
 public record HackernewsItem(
-    String title, String url, String by, Date time, Integer descendants
+    String id, String title, String url, String by, Date time, Integer descendants
 ) {
 }
